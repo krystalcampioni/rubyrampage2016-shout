@@ -30,6 +30,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem 'shoulda-matchers', '3.1.1'
+  gem 'guard-rspec'
 end
 
 group :development do
