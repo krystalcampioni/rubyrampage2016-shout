@@ -16,7 +16,7 @@ RSpec.describe SessionsController, type: :controller do
 
     before do
       request.env['omniauth.auth'] = twitter_hash
-      get :create, provider: 'twitter'
+      get :create, params: { provider: 'twitter' }
     end
 
     it { expect(session[:user_id]).to_not be_nil }
