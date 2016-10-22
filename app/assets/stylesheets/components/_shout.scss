@@ -1,0 +1,41 @@
+.shout {
+  @include span-columns(12 of 12);
+  padding: 10px;
+
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 12);
+    @include shift(3);
+  }
+
+  &__badge {
+    @include size(70px);
+    background: rgba(0, 0, 0, 0) image-url('badge.svg') no-repeat scroll 0 0 / 70px auto;
+    float: left;
+    font-size: 36px;
+    margin-right: 10px;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+  &__text {
+    color: $text-color;
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+    min-height: 60px;
+
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  &__address {
+    border-top: .5px solid  rgba($text-color, .08);
+    color: rgba($text-color, .5);
+    font-size: 14px;
+    font-weight: 200;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+}
