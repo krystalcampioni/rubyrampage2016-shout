@@ -1,5 +1,6 @@
 class ShoutsController < ApplicationController
   before_action :authenticate_user!, only: [:me, :create]
+  before_action :fetch_user, only: [:create]
 
   def index
     @user = User.find_by!(nickname: params[:user_id])
@@ -7,7 +8,6 @@ class ShoutsController < ApplicationController
   end
 
   def create
-    @user = User.find_or_create_by!(nickname: params[:user_id])
     @shout = @user.shouts.create!(shout_params.merge(shouter: current_user))
     redirect_to root_path
   end
@@ -20,6 +20,10 @@ class ShoutsController < ApplicationController
   end
 
   private
+
+  def fetch_user
+    @user = User.find_by(nickname: params[:user_id]) || User.create(UserFromTwitter.new(params[:user_id]).attributes)
+  end
 
   def shout_params
     params.require(:shout).permit(:message, :emoji_badge)

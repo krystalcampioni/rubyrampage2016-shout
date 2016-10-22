@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Basic ZnBpUzhZSXFHaTNKVUJHMkM1d0FRa2hJOTpKVFpIOVhKNVpVVXhBeVV2SEZHNHVQTEpUblhmS0l5YlM4aTZaUFFSQ0pUM0Zzd3dnWA==
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '152'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 22 Oct 2016 19:53:40 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sat, 22 Oct 2016 19:53:40 GMT
+      Ml:
+      - A
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_d
+      Set-Cookie:
+      - guest_id=v1%3A147716602084333076; Domain=.twitter.com; Path=/; Expires=Mon,
+        22-Oct-2018 19:53:40 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 83b4a79bb4d271d8dfc998d96d657819
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Response-Time:
+      - '148'
+      X-Transaction:
+      - 004f804000c06115
+      X-Tsa-Request-Body-Time:
+      - '1'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAAChyxgAAAAAA01SFyzEXmJQTTXERpvdSvVVNoEQ%3DMUjSR05Gi2kY4xFqSyJPpWfa8gtIGky1PGISrea0MBPy2cTXos"}'
+    http_version: 
+  recorded_at: Sat, 22 Oct 2016 19:53:40 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/users/show.json?screen_name=krystalcampionishkshkdhs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAChyxgAAAAAA01SFyzEXmJQTTXERpvdSvVVNoEQ%3DMUjSR05Gi2kY4xFqSyJPpWfa8gtIGky1PGISrea0MBPy2cTXos
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '77'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 22 Oct 2016 19:53:41 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sat, 22 Oct 2016 19:53:41 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_d
+      Set-Cookie:
+      - guest_id=v1%3A147716602113364699; Domain=.twitter.com; Path=/; Expires=Mon,
+        22-Oct-2018 19:53:41 UTC
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 6102d8d55f969ac8e1af858927204451
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '900'
+      X-Rate-Limit-Remaining:
+      - '896'
+      X-Rate-Limit-Reset:
+      - '1477166220'
+      X-Response-Time:
+      - '140'
+      X-Transaction:
+      - 00bf4aae0006ddcf
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":50,"message":"User not found."}]}'
+    http_version: 
+  recorded_at: Sat, 22 Oct 2016 19:53:41 GMT
+recorded_with: VCR 3.0.3

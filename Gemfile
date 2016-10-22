@@ -19,6 +19,7 @@ gem 'bourbon'
 gem 'neat'
 
 gem 'omniauth-twitter', '1.2.1'
+gem 'twitter'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -32,9 +33,14 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'pry-rails'
+end
+
+group :test do
   gem 'shoulda-matchers', '3.1.1'
   gem 'factory_girl_rails'
   gem 'rails-controller-testing'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

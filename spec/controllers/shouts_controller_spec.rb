@@ -44,6 +44,20 @@ RSpec.describe ShoutsController, type: :controller do
           expect(create_action).to redirect_to root_path
         end
       end
+
+      context 'with an user which wasnt created before', :vcr do
+        it 'creates a new user' do
+          expect { create_action }.to change { User.count }.by(1)
+        end
+
+        it 'creates a shout' do
+          expect { create_action }.to change { Shout.count }.by(1)
+        end
+
+        it 'redirects to root' do
+          expect(create_action).to redirect_to root_path
+        end
+      end
     end
 
     context 'without a logged user' do
