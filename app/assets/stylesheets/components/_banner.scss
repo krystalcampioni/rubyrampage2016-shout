@@ -7,8 +7,7 @@
 
   &__content {
     @include span-columns(12 of 12);
-    padding-top: 90px;
-    padding-bottom: 60px;
+    padding: 90px 10px 60px;
 
     @include media($medium-screen-up) {
       @include span-columns(6 of 12);
