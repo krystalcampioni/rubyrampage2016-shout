@@ -12,6 +12,12 @@
     <header class="header">
       <div class="header__content">
         <h1 class="header__logo">GimmeStars</h2>
+        <% if current_user %>
+          <img src="http://lorempixel.com/40/40/"/>
+          <%= current_user.nickname %>
+        <% else %>
+          <%= link_to 'Login with Twitter', '/auth/twitter', class: "button button--twitter" %>
+        <% end %>
       </div>
     </header>
     <%= yield %>
