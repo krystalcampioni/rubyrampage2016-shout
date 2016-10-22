@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'shoulda-matchers', '3.1.1'
   gem 'guard-rspec'
+  gem 'factory_girl_rails'
 end
 
 group :development do
