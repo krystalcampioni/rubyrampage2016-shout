@@ -23,7 +23,7 @@
 
             <div class="sliding-panel-content">
               <img src="<%= current_user.profile_image_url %>" class="user__img"/>
-              <div class="user__nickname"><%= current_user.nickname %></div>
+              <div class="user__nickname"><%= link_to current_user.nickname, user_shouts_path(current_user) %></div>
               <a class="user__logout" href="#">logout</a>
             </div>
             <div class="sliding-panel-fade-screen"></div>

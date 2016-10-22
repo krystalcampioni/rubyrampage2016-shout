@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'application#home'
 
-  resources :users do
+  resources :users, path: 'u' do
     resources :shouts, only: [:index, :create]
   end
 
