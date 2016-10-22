@@ -1,0 +1,26 @@
+.reactions {
+  border-radius: $base-border-radius;
+  border: solid 0.5px rgba($text-color, 0.06);
+  float: left;
+  line-height: 1.2;
+  margin-right: 5px;
+  padding: 2px 5px;
+
+  &--button {
+    border-color: $main-color;
+    color: $main-color;
+    cursor: default;
+    font-size: 12px;
+    height: 24px;
+    padding-top: 4px;
+  }
+
+  &__emoji {
+    float: left;
+    margin-right: 5px;
+  }
+
+  &__count {
+    color: rgba($text-color, .5);
+  }
+}
