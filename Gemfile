@@ -17,6 +17,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'bourbon'
 gem 'neat'
+
+gem 'omniauth-twitter', '1.2.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -31,7 +33,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'shoulda-matchers', '3.1.1'
-  gem 'guard-rspec'
   gem 'factory_girl_rails'
   gem 'rails-controller-testing'
 end
@@ -42,6 +43,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
   gem 'rubocop', require: false
+  gem 'guard-rspec'
   gem 'scss-lint', require: false
 end
 
