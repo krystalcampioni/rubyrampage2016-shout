@@ -2,6 +2,6 @@
 @import 'neat';
 @import 'grid-settings';
 
-div.container {
+.container {
   @include outer-container;
 }
