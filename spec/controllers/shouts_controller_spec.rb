@@ -8,7 +8,7 @@ RSpec.describe ShoutsController, type: :controller do
 
   describe 'GET #index' do
     it 'shows the shouts of a given user' do
-      get :index, params: { user_id: user.id }
+      get :index, params: { user_id: user.nickname }
       expect(assigns(:shouts)).to contain_exactly(shout)
     end
 

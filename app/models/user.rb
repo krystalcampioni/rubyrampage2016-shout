@@ -6,6 +6,10 @@ class User < ApplicationRecord
   validates :nickname, presence: true, uniqueness: true
   validates :profile_image_url, presence: true
 
+  def to_param
+    nickname
+  end
+
   def self.find_or_create_from_auth_hash(twitter_hash)
     user = where(nickname: twitter_hash[:info][:nickname]).first_or_initialize
     user.update(name: twitter_hash[:info][:name],

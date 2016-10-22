@@ -46,4 +46,10 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe '#to_param' do
+    it 'uses nickname as the default param' do
+      expect(build(:user, nickname: 'lunks').to_param).to eq 'lunks'
+    end
+  end
 end
