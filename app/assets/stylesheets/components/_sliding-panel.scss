@@ -1,0 +1,39 @@
+$sliding-panel-width: 220px;
+
+.sliding-panel-content {
+  @include position(fixed, 0 0 0 auto);
+  @include size($sliding-panel-width 100%);
+  @include transform(translateX($sliding-panel-width));
+  @include transition(all .25s linear);
+  background: $contrast-color;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  text-align: center;
+  z-index: 999999;
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.sliding-panel-fade-screen {
+  @include position(fixed, 0 0 0 0);
+  @include transition;
+  background: $main-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+
+  &.is-visible {
+    opacity: .8;
+    visibility: visible;
+  }
+}
+
+.sliding-panel-close {
+  cursor: pointer;
+}
+
+.is-locked {
+  overflow: hidden;
+}

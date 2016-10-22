@@ -15,4 +15,8 @@
   &__content {
     @include outer-container;
   }
+
+  &__logo {
+    float: left;
+  }
 }

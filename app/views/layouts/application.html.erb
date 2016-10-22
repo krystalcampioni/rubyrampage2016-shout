@@ -13,8 +13,24 @@
       <div class="header__content">
         <h1 class="header__logo">GimmeStars</h2>
         <% if current_user %>
-          <img src="http://lorempixel.com/40/40/"/>
-          <%= current_user.nickname %>
+          <nav class="user__menu">
+
+            <button class="sliding-panel-button hamburguer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="sliding-panel-content">
+              <img src="<%= current_user.profile_image_url %>" class="user__img"/>
+              <%= current_user.nickname %>
+              <a href="#">logout</a>
+            </div>
+            <div class="sliding-panel-fade-screen"></div>
+
+
+
+          </nav>
         <% else %>
           <%= link_to 'Login with Twitter', '/auth/twitter', class: "button button--twitter" %>
         <% end %>
