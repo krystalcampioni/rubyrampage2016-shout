@@ -19,6 +19,45 @@ RSpec.describe ShoutsController, type: :controller do
     end
   end
 
+  describe 'POST #create' do
+    def create_action
+      post :create, params: { shout: { message: 'You rock!', emoji_badge: '\u{1f431}' }, user_id: 'lunks' }
+    end
+
+    context 'with a logged user' do
+      before do
+        allow(controller).to receive(:current_user).and_return(user)
+      end
+
+      context 'with an user already created' do
+        before { create(:user, nickname: 'lunks') }
+
+        it 'does not a new user' do
+          expect { create_action }.not_to change { User.count }
+        end
+
+        it 'creates a shout' do
+          expect { create_action }.to change { Shout.count }.by(1)
+        end
+
+        it 'redirects to root' do
+          expect(create_action).to redirect_to root_path
+        end
+      end
+    end
+
+    context 'without a logged user' do
+      before do
+        allow(controller).to receive(:current_user).and_return(nil)
+      end
+
+      it 'redirects to root_path' do
+        create_action
+        is_expected.to redirect_to root_path
+      end
+    end
+  end
+
   describe 'GET #me' do
     context 'with a logged user' do
       before do

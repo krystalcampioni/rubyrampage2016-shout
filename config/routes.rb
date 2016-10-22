@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'application#home'
 
   resources :users do
-    resources :shouts, only: [:index]
+    resources :shouts, only: [:index, :create]
   end
 
   get '/users/me/shouts' => 'shouts#me', as: :current_user_shouts
