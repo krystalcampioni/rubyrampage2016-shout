@@ -11,8 +11,8 @@ $buttons: 'button', 'input[type="submit"]';
 
 .button {
   @include transition(.2s);
-  border-radius: $base-border-radius;
   border: 0;
+  border-radius: $base-border-radius;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -27,16 +27,18 @@ $buttons: 'button', 'input[type="submit"]';
   }
 
   &--primary {
-    color: $contrast-color;
     background: $secondary-color;
+    color: $contrast-color;
+
     &:hover {
       background: lighten($secondary-color, 10%);
     }
   }
 
   &--secondary {
-    color: $contrast-color;
     border: 1px solid $contrast-color;
+    color: $contrast-color;
+
     &:hover {
       background: $contrast-color;
       color: $main-color;
@@ -46,11 +48,11 @@ $buttons: 'button', 'input[type="submit"]';
   &--twitter {
     background: transparent image-url('ic-twitter.svg') no-repeat scroll 6px 7px / 20px auto;
     border: 1px solid $contrast-color;
-    color: white;
+    color: $contrast-color;
     padding: 10px 25px 10px 35px;
 
     &:hover {
-      background-color: #55acee;
+      background-color: $twitter-color;
     }
   }
 }
