@@ -21,7 +21,7 @@ RSpec.describe ShoutsController, type: :controller do
 
   describe 'POST #create' do
     def create_action
-      post :create, params: { shout: { message: 'You rock!', emoji_badge: '\u{1f431}' }, user_id: 'lunks' }
+      post :create, params: { shout: { message: 'You rock!'}, user_id: 'lunks' }
     end
 
     context 'with a logged user' do

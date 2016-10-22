@@ -8,6 +8,5 @@ RSpec.describe Shout, type: :model do
 
   describe 'validations' do
     it { is_expected.to validate_presence_of(:message) }
-    it { is_expected.to validate_presence_of(:emoji_badge) }
   end
 end
