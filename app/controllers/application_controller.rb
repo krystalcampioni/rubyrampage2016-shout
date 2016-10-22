@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    # TODO REPLACE WITH DEVISE
+    # TODO: REPLACE WITH DEVISE
   end
 
   def authenticate_user!
-    # TODO REPLACE WITH DEVISE
+    # TODO: REPLACE WITH DEVISE
     redirect_to root_path unless current_user.present?
   end
 end

@@ -6,10 +6,10 @@ RSpec.describe ShoutsController, type: :controller do
   let!(:other_shout) { create(:shout) }
   let!(:sent_shout) { create(:shout, shouter: user) }
 
-  describe "GET #index" do
+  describe 'GET #index' do
     it 'shows the shouts of a given user' do
       get :index, params: { user_id: user.id }
-      expect(assigns :shouts).to contain_exactly(shout)
+      expect(assigns(:shouts)).to contain_exactly(shout)
     end
 
     it 'renders 404 if user not found' do
@@ -19,7 +19,7 @@ RSpec.describe ShoutsController, type: :controller do
     end
   end
 
-  describe "GET #me" do
+  describe 'GET #me' do
     context 'with a logged user' do
       before do
         allow(controller).to receive(:current_user).and_return(user)
@@ -27,9 +27,9 @@ RSpec.describe ShoutsController, type: :controller do
 
       it 'shows its shouts' do
         get :me
-        expect(assigns :shouts).to contain_exactly(shout)
-        expect(assigns :sent_shouts).to contain_exactly(sent_shout)
-        expect(assigns :shout).to be_an_instance_of(Shout)
+        expect(assigns(:shouts)).to contain_exactly(shout)
+        expect(assigns(:sent_shouts)).to contain_exactly(sent_shout)
+        expect(assigns(:shout)).to be_an_instance_of(Shout)
       end
     end
 
