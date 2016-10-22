@@ -10,17 +10,11 @@
   <address class="shout__address">
     <b>@swallace</b> sent on 04/12/2016
   </address>
-  <div class="reactions">
-    <span class="reactions__emoji">❤️</span>
-    <span class="reactions__count">000</span>
-  </div>
-  <div class="reactions">
-    <span class="reactions__emoji">❤️</span>
-    <span class="reactions__count">000</span>
-  </div>
-  <div class="reactions">
-    <span class="reactions__emoji">❤️</span>
-    <span class="reactions__count">000</span>
-  </div>
+  <% rand(4).downto(0) do %>
+    <div class="reactions">
+      <span class="reactions__emoji"><%= %w(😍 😘 😍 👏 🙌 ❤️).sample %></span>
+      <span class="reactions__count">000</span>
+    </div>
+  <% end %>
   <div class="reactions reactions--button">Add reaction </div>
 </article>
