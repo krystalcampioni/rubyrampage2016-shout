@@ -1,0 +1,14 @@
+.header {
+  @include transition(all .5s ease-in-out);
+  background: transparent;
+  color: $contrast-color;
+  height: 60px;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  &--is-opaque {
+    @include linear-gradient($main-color, $main-color2);
+  }
+}

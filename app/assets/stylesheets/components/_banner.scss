@@ -1,0 +1,5 @@
+.banner {
+  @include linear-gradient($main-color, $main-color2);
+  color: $contrast-color;
+  padding-top: 60px;
+}
