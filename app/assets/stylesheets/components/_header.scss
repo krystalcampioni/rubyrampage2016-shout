@@ -11,4 +11,8 @@
   &--is-opaque {
     @include linear-gradient($main-color, $main-color2);
   }
+
+  &__content {
+    @include outer-container;
+  }
 }

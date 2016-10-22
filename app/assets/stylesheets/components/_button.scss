@@ -48,5 +48,9 @@ $buttons: 'button', 'input[type="submit"]';
     border: 1px solid $contrast-color;
     color: white;
     padding: 10px 25px 10px 35px;
+
+    &:hover {
+      background-color: #55acee;
+    }
   }
 }

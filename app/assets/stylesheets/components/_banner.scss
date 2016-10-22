@@ -1,5 +1,18 @@
 .banner {
   @include linear-gradient($main-color, $main-color2);
   color: $contrast-color;
-  padding-top: 60px;
+  float: left;
+  text-align: center;
+  width: 100%;
+
+  &__content {
+    @include span-columns(12 of 12);
+    padding-top: 90px;
+    padding-bottom: 60px;
+
+    @include media($medium-screen-up) {
+      @include span-columns(6 of 12);
+      @include shift(3);
+    }
+  }
 }
