@@ -1,0 +1,11 @@
+scss_files: 'app/assets/stylesheets/**/*.scss'
+
+exclude: 'app/assets/stylesheets/plugins/*.scss'
+
+linters:
+  SelectorDepth:
+    max_depth: 4
+  NestingDepth:
+    max_depth: 4
+  SelectorFormat:
+    convention: 'hyphenated_BEM'
