@@ -13,7 +13,7 @@
   <% rand(4).downto(0) do %>
     <div class="reactions">
       <span class="reactions__emoji"><%= %w(😍 😘 😍 👏 🙌 ❤️).sample %></span>
-      <span class="reactions__count">000</span>
+      <span class="reactions__count"><%= rand(40) %></span>
     </div>
   <% end %>
   <div class="reactions reactions--button">Add reaction </div>
