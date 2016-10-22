@@ -19,6 +19,7 @@ $buttons: 'button', 'input[type="submit"]';
   font-size: rem(14);
   font-weight: normal;
   line-height: 1;
+  text-decoration: none;
   text-transform: uppercase;
 
   &:disabled {

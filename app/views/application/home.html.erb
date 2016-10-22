@@ -5,7 +5,7 @@
     <% if current_user %>
       <%= current_user.nickname %>
     <% else %>
-      <%= link_to 'Login with Twitter', '/auth/twitter' %>
+      <%= link_to 'Login with Twitter', '/auth/twitter', class: "button button--twitter" %>
     <% end %>
   </div>
 </div>
