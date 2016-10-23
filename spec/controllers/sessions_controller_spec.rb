@@ -23,4 +23,16 @@ RSpec.describe SessionsController, type: :controller do
     it { expect(response).to redirect_to(root_path) }
     it { expect(assigns(:user)).to eq(User.find_by(nickname: 'johnfuu')) }
   end
+
+  describe 'GET logout' do
+    let(:user) { create(:user) }
+
+    before do
+      session[:user_id] = user.id
+      get :logout
+    end
+
+    it { expect(session[:user_id]).to be_nil }
+    it { expect(response).to redirect_to(root_path) }
+  end
 end
