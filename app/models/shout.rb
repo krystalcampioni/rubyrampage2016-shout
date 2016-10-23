@@ -12,6 +12,12 @@ class Shout < ApplicationRecord
     message.scan(/(^|[^@\w])@(\w{1,15})\b/).map(&:last)
   end
 
+  def reactions_array
+    reactions.collect do |reaction|
+      { reaction.emoji => reaction.counter }
+    end
+  end
+
   private
 
   def associate_users

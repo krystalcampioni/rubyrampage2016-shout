@@ -6,10 +6,11 @@ RSpec.describe ReactionsController, type: :controller do
 
     before do
       post :create, reaction: { emoji: '👻' }, shout_id: shout.id
+      post :create, reaction: { emoji: '👻' }, shout_id: shout.id
     end
 
     it { expect(response).to have_http_status(:success) }
     it { expect(shout.reactions.count).to eq(1) }
-    it { expect(response.body).to eq('[{"👻":1}]') }
+    it { expect(response.body).to eq('[{"👻":2}]') }
   end
 end
