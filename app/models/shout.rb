@@ -17,7 +17,7 @@ class Shout < ApplicationRecord
   end
 
   def reactions_array
-    reactions.collect do |reaction|
+    reactions.order(:created_at).collect do |reaction|
       { emoji: reaction.emoji,
         counter: reaction.counter }
     end
