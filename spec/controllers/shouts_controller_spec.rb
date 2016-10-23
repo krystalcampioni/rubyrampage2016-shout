@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ShoutsController, type: :controller do
   let!(:user) { create(:user) }
-  let!(:shout) { create(:shout, user: user) }
+  let!(:shout) { create(:shout, users: [user]) }
   let!(:other_shout) { create(:shout) }
   let!(:sent_shout) { create(:shout, shouter: user) }
 
@@ -19,9 +19,9 @@ RSpec.describe ShoutsController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
+  describe 'POST #create', :vcr do
     def create_action
-      post :create, params: { shout: { message: 'You rock!' }, user_id: 'lunks' }
+      post :create, params: { shout: { message: '@lunks You rock!' } }
     end
 
     context 'with a logged user' do
@@ -45,7 +45,7 @@ RSpec.describe ShoutsController, type: :controller do
         end
       end
 
-      context 'with an user which wasnt created before', :vcr do
+      context 'with an user which wasnt created before' do
         it 'creates a new user' do
           expect { create_action }.to change { User.count }.by(1)
         end
