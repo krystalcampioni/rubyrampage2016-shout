@@ -26,8 +26,9 @@ $(function() {
   };
 
   function handleEmojiForShouts(selector) {
-    var el = $(selector);
-    el.find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked(el) })
+    $(selector).each(function() {
+      $(this).find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked($(this)) })
+    });
   };
 
   handleEmojiForShouts('.shout');
