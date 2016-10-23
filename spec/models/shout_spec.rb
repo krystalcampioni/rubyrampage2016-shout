@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Shout, type: :model do
   describe 'associations' do
     it { is_expected.to belong_to(:shouter).class_name('User') }
-    it { is_expected.to have_and_belong_to_many(:users) }
+    it { is_expected.to have_many(:shout_users) }
+    it { is_expected.to have_many(:users).through(:shout_users) }
   end
 
   describe 'validations' do

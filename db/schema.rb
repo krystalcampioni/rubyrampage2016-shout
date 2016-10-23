@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023020512) do
+ActiveRecord::Schema.define(version: 20161023141624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "shout_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "shout_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shout_id"], name: "index_shout_users_on_shout_id", using: :btree
+    t.index ["user_id"], name: "index_shout_users_on_user_id", using: :btree
+  end
 
   create_table "shouts", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,11 +34,6 @@ ActiveRecord::Schema.define(version: 20161023020512) do
     t.index ["user_id"], name: "index_shouts_on_user_id", using: :btree
   end
 
-  create_table "shouts_users", id: false, force: :cascade do |t|
-    t.integer "shout_id", null: false
-    t.integer "user_id",  null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "nickname"
@@ -38,5 +42,7 @@ ActiveRecord::Schema.define(version: 20161023020512) do
     t.datetime "updated_at",        null: false
   end
 
+  add_foreign_key "shout_users", "shouts"
+  add_foreign_key "shout_users", "users"
   add_foreign_key "shouts", "users"
 end

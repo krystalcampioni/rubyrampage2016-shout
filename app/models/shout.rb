@@ -1,6 +1,7 @@
 class Shout < ApplicationRecord
   belongs_to :shouter, class_name: 'User'
-  has_and_belongs_to_many :users
+  has_many :shout_users
+  has_many :users, through: :shout_users
 
   validates :message, presence: true
 
@@ -14,7 +15,8 @@ class Shout < ApplicationRecord
 
   def associate_users
     identified_users.each do |nickname|
-      users << User.fetch_by_nickname(nickname)
+      user = User.fetch_by_nickname(nickname)
+      shout_users.find_or_create_by(user_id: user.id)
     end
   end
 end
