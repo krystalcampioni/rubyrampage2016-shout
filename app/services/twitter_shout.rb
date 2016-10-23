@@ -4,13 +4,20 @@ class TwitterShout
   end
 
   def create
-    @shout.users.each do |user|
-      client.update(message_for_user(user))
+    begin
+      @shout.users.each do |user|
+        client.update(message_for_user(user))
+      end
+    rescue
+      nil
     end
   end
 
   def message_for_user(user)
-    "@#{user.nickname} Hey, @#{@shout.shouter.nickname} just sent you a shout at http://#{Rails.application.secrets.domain}/u/#{user.nickname}"
+    shouter = @shout.shouter.nickname
+    nickname = user.nickname
+    app_url = "http://#{Rails.application.secrets.domain}/u/#{nickname}"
+    "@#{nickname} Hey, @#{shouter_nickname} just sent you a shout at #{app_url}"
   end
 
   private
