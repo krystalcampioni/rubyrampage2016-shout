@@ -9,6 +9,6 @@
   </div>
 </div>
 
-<% Shout.order(created_at: :desc).limit(5).each do |shout| %>
+<% Shout.order(created_at: :desc).limit(10).each do |shout| %>
     <%= render shout =%>
 <% end %>
