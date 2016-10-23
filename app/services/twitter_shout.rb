@@ -4,6 +4,8 @@ class TwitterShout
   end
 
   def create
+    return if Rails.env.test?
+
     @shout.users.each do |user|
       client.update(message_for_user(user))
     end
