@@ -3,7 +3,7 @@
     <ul class="accordion-tabs-minimal">
       <li class="tab-header-and-content">
         <a href="#" class="tab-link is-active">
-          <span class="tab-link--big">12 ⭐️</span>
+          <span class="tab-link--big"><%= @shouts.count %> ⭐️</span>
           <span class="tab-link--small">received</span>
         </a>
         <div class="tab-content">
@@ -15,7 +15,7 @@
       <li class="tab-header-and-content">
         <a href="#" class="tab-link">
           <span class="tab-link--small">sent</span>
-          <span class="tab-link--big">102 ⭐️</span>
+          <span class="tab-link--big"><%= @user.sent_shouts.count %> ⭐️</span>
         </a>
         <div class="tab-content">
           <% @user.sent_shouts.each do |shout| %>
