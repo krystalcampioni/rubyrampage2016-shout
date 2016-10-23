@@ -8,6 +8,7 @@ class ShoutsController < ApplicationController
 
   def create
     @shout = current_user.sent_shouts.create!(shout_params)
+    TwitterShout.new(@shout).create rescue nil
     redirect_to root_path
   end
 
