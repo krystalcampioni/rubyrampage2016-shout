@@ -13,3 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require_self
+
+$(function() {
+
+  function emojiPicked(shoutId) {
+    return function(emoji) {
+      console.log(emoji, shoutId);
+    }
+  };
+
+  function handleEmojiForShouts(selector) {
+    var el = $(selector);
+    var shoutId = el.data('shout-id');
+    el.find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked(shoutId) })
+  };
+
+  handleEmojiForShouts('.shout');
+});
