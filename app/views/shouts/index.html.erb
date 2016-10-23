@@ -1,8 +1,8 @@
 <% content_for :header_class, "header--is-opaque" %>
 <div class="banner">
   <div class="banner__content">
-    <img src="<%= current_user.profile_image_url.gsub("_normal", '') %>" class="user__img user__img--is-large"/>
-    <div class="user__flag-name"><%= link_to current_user.nickname, user_shouts_path(current_user) %></div>
+    <img src="<%= @user.profile_image_url.gsub("_normal", '') %>" class="user__img user__img--is-large"/>
+    <div class="user__flag-name"><%= link_to @user.nickname, user_shouts_path(@user) %></div>
   </div>
 </div>
 
