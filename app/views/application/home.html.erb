@@ -9,7 +9,6 @@
   </div>
 </div>
 
-<%= render "shouts/shout" =%>
-<%= render "shouts/shout" =%>
-<%= render "shouts/shout" =%>
-<%= render "shouts/shout" =%>
+<% Shout.order(created_at: :desc).limit(5).each do |shout| %>
+    <%= render shout =%>
+<% end %>

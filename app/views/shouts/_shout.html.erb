@@ -4,11 +4,11 @@
       ⭐️
     </div>
     <p>
-      <b>@JoseAlfredo</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+      <%= shout.message %>
     </p>
   </div>
   <address class="shout__address">
-    <b>@swallace</b> sent on 04/12/2016
+    <b>@<%= shout.shouter.nickname %></b> sent on <%= shout.created_at.to_s(:short) %>
   </address>
   <% rand(4).downto(0) do %>
     <div class="reactions">
