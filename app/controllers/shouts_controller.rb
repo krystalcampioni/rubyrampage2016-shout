@@ -3,6 +3,7 @@ class ShoutsController < ApplicationController
 
   def index
     @user = User.find_by!(nickname: params[:user_id])
+    p @user.shouts.count
     @shouts = @user.shouts
   end
 

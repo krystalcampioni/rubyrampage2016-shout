@@ -8,6 +8,17 @@
 
 <%= render 'shout-tabs' %>
 
+<h2>Meus shouts recebidos</h2>
+<% @shouts.each do |shout| %>
+  <%= render shout =%>
+<% end %>
+
+<h2>Meus shouts enviados</h2>
+<% @user.sent_shouts.each do |shout| %>
+  <%= render shout %>
+<% end %>
+
+
 <%= form_for Shout.new do |f| %>
 <div class="new-shout">
   <div class="container">
