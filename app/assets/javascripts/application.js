@@ -17,7 +17,9 @@
 
 $(function() {
 
-  function emojiPicked(shoutId) {
+  function emojiPicked(el) {
+    var shoutId = el.data('shout-id');
+
     return function(emoji) {
       console.log(emoji, shoutId);
     }
@@ -25,8 +27,7 @@ $(function() {
 
   function handleEmojiForShouts(selector) {
     var el = $(selector);
-    var shoutId = el.data('shout-id');
-    el.find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked(shoutId) })
+    el.find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked(el) })
   };
 
   handleEmojiForShouts('.shout');
