@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'associations' do
-    it { is_expected.to have_many(:shouts) }
     it { is_expected.to have_many(:sent_shouts).class_name('Shout').with_foreign_key(:shouter_id) }
+    it { is_expected.to have_and_belong_to_many(:shouts) }
   end
 
   describe 'validations' do

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ShoutsController, type: :controller do
   let!(:user) { create(:user) }
-  let!(:shout) { create(:shout, user: user) }
+  let!(:shout) { create(:shout, users: [user]) }
   let!(:other_shout) { create(:shout) }
   let!(:sent_shout) { create(:shout, shouter: user) }
 

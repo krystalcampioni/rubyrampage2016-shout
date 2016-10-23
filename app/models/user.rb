@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :shouts
   has_many :sent_shouts, class_name: 'Shout', foreign_key: :shouter_id
+  has_and_belongs_to_many :shouts
 
   validates :name, presence: true
   validates :nickname, presence: true, uniqueness: true
@@ -8,6 +8,10 @@ class User < ApplicationRecord
 
   def to_param
     nickname
+  end
+
+  def self.fetch_by_nickname(nickname)
+    User.find_by(nickname: nickname) || User.create(UserFromTwitter.new(nickname).attributes)
   end
 
   def self.find_or_create_from_auth_hash(twitter_hash)
