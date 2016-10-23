@@ -1,11 +1,16 @@
 .reactions {
-  border: .5px solid rgba($text-color , .06); 
+  border: .5px solid rgba($text-color , .06);
   border-radius: $base-border-radius;
+  cursor: pointer;
   float: left;
   line-height: 1.2;
   margin-bottom: 5px;
   margin-right: 5px;
   padding: 2px 5px;
+
+  &:hover {
+    border-color: $main-color;
+  }
 
   &--button {
     border-color: $main-color;
@@ -24,4 +29,9 @@
   &__count {
     color: rgba($text-color, .5);
   }
+}
+
+.selected {
+  background-color: rgba($main-color, .2);
+  border-color: $main-color;
 }
