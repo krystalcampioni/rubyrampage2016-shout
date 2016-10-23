@@ -1,0 +1,6 @@
+<% reactions.each do |reaction| %>
+  <div class="reactions">
+    <span class="reactions__emoji"><%= reaction[:emoji] %></span>
+    <span class="reactions__count"><%= reaction[:counter] %></span>
+  </div>
+<% end %>

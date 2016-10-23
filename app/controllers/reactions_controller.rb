@@ -1,9 +1,7 @@
 class ReactionsController < ApplicationController
   def create
-    reaction = shout.reactions.first_or_create(reaction_params)
-    reaction.increment(:counter)
-
-    render json: shout.reactions_array
+    reaction = shout.reactions.find_or_create_by(emoji: reaction_params[:emoji])
+    reaction.increment!(:counter)
   end
 
   private

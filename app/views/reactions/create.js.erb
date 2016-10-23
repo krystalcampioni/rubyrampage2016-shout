@@ -1,0 +1,1 @@
+$("#reactions-shout-<%= @shout.id %>").html("<%= j render("shouts/reactions", reactions: @shout.reactions_array) %>")

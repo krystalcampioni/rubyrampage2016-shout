@@ -18,7 +18,8 @@ class Shout < ApplicationRecord
 
   def reactions_array
     reactions.collect do |reaction|
-      { reaction.emoji => reaction.counter }
+      { emoji: reaction.emoji,
+        counter: reaction.counter }
     end
   end
 
