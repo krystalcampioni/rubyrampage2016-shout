@@ -31,11 +31,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 19:53:40 GMT
+      - Sun, 23 Oct 2016 14:58:59 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 22 Oct 2016 19:53:40 GMT
+      - Sun, 23 Oct 2016 14:58:59 GMT
       Ml:
       - A
       Pragma:
@@ -43,22 +43,22 @@ http_interactions:
       Server:
       - tsa_d
       Set-Cookie:
-      - guest_id=v1%3A147716602027455974; Domain=.twitter.com; Path=/; Expires=Mon,
-        22-Oct-2018 19:53:40 UTC
+      - guest_id=v1%3A147723473982267611; Domain=.twitter.com; Path=/; Expires=Tue,
+        23-Oct-2018 14:58:59 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - 8290fe3b0e0ddc5d9fd3845986e03e58
+      - 574430f36abc1d0924d94c4ced908af4
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
       X-Response-Time:
-      - '153'
+      - '146'
       X-Transaction:
-      - 006bd5310016c95d
+      - 00aff92200b77bc8
       X-Tsa-Request-Body-Time:
       - '0'
       X-Twitter-Response-Tags:
@@ -71,7 +71,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAAChyxgAAAAAA01SFyzEXmJQTTXERpvdSvVVNoEQ%3DMUjSR05Gi2kY4xFqSyJPpWfa8gtIGky1PGISrea0MBPy2cTXos"}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 19:53:40 GMT
+  recorded_at: Sun, 23 Oct 2016 14:58:59 GMT
 - request:
     method: get
     uri: https://api.twitter.com/1.1/users/show.json?screen_name=krystalcampioni
@@ -97,22 +97,22 @@ http_interactions:
       Content-Disposition:
       - attachment; filename=json.json
       Content-Length:
-      - '1278'
+      - '1279'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 19:53:40 GMT
+      - Sun, 23 Oct 2016 14:59:00 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 22 Oct 2016 19:53:40 GMT
+      - Sun, 23 Oct 2016 14:59:00 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_d
       Set-Cookie:
-      - guest_id=v1%3A147716602054927425; Domain=.twitter.com; Path=/; Expires=Mon,
-        22-Oct-2018 19:53:40 UTC
+      - guest_id=v1%3A147723474008205636; Domain=.twitter.com; Path=/; Expires=Tue,
+        23-Oct-2018 14:59:00 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
@@ -120,7 +120,7 @@ http_interactions:
       X-Access-Level:
       - read
       X-Connection-Hash:
-      - b68f8b888626556000763c488a0f6271
+      - c56b9e2e66b60fe359ec0d2f5d165ff6
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -128,13 +128,13 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '900'
       X-Rate-Limit-Remaining:
-      - '897'
+      - '865'
       X-Rate-Limit-Reset:
-      - '1477166220'
+      - '1477235578'
       X-Response-Time:
-      - '154'
+      - '158'
       X-Transaction:
-      - 00c8350500d2c05e
+      - 0017e7010037c4e2
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Xss-Protection:
@@ -145,7 +145,7 @@ http_interactions:
         Paulo, Brasil","profile_location":{"id":"68e019afec7d0ba5","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/68e019afec7d0ba5.json","place_type":"unknown","name":"S\u00e3o
         Paulo, Brasil","full_name":"S\u00e3o Paulo, Brasil","country_code":"","country":"","contained_within":[],"bounding_box":null,"attributes":{}},"description":"Freelance
         Designer and Front-end Developer. Tech, design, and video game enthusiast.
-        || EN & PT-BR","url":"http:\/\/t.co\/jL2gcSoYsV","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/jL2gcSoYsV","expanded_url":"http:\/\/www.krystalcampioni.com","display_url":"krystalcampioni.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":37674,"friends_count":33185,"listed_count":251,"created_at":"Fri
+        || EN & PT-BR","url":"http:\/\/t.co\/jL2gcSoYsV","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/jL2gcSoYsV","expanded_url":"http:\/\/www.krystalcampioni.com","display_url":"krystalcampioni.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":37678,"friends_count":33185,"listed_count":249,"created_at":"Fri
         Oct 31 23:01:11 +0000 2014","favourites_count":453,"utc_offset":-25200,"time_zone":"America\/Vancouver","geo_enabled":false,"verified":false,"statuses_count":621,"lang":"en","status":{"created_at":"Thu
         Oct 20 21:08:54 +0000 2016","id":789211814898855936,"id_str":"789211814898855936","text":"RT
         @rachsmithtweets: I always still use my hands to talk when I''m sharing my
@@ -157,5 +157,5 @@ http_interactions:
         and no one can see me lol","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"source":"\u003ca
         href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":3,"favorite_count":29,"favorited":false,"retweeted":false,"lang":"en"},"is_quote_status":false,"retweet_count":3,"favorite_count":0,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"000000","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/779276930709393408\/fVyN5kO8_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/779276930709393408\/fVyN5kO8_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/2853981112\/1470519366","profile_link_color":"3B94D9","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"000000","profile_text_color":"000000","profile_use_background_image":false,"has_extended_profile":true,"default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null,"translator_type":"none"}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 19:53:40 GMT
+  recorded_at: Sun, 23 Oct 2016 14:59:00 GMT
 recorded_with: VCR 3.0.3

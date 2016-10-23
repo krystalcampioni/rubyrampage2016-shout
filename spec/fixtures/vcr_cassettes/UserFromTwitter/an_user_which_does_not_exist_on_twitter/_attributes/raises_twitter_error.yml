@@ -31,11 +31,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 19:53:40 GMT
+      - Sun, 23 Oct 2016 14:59:00 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 22 Oct 2016 19:53:40 GMT
+      - Sun, 23 Oct 2016 14:59:00 GMT
       Ml:
       - A
       Pragma:
@@ -43,24 +43,24 @@ http_interactions:
       Server:
       - tsa_d
       Set-Cookie:
-      - guest_id=v1%3A147716602084333076; Domain=.twitter.com; Path=/; Expires=Mon,
-        22-Oct-2018 19:53:40 UTC
+      - guest_id=v1%3A147723474035325943; Domain=.twitter.com; Path=/; Expires=Tue,
+        23-Oct-2018 14:59:00 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - 83b4a79bb4d271d8dfc998d96d657819
+      - b73e9bb5f7abfa889bcd5972ca0154e4
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - DENY
       X-Response-Time:
-      - '148'
+      - '145'
       X-Transaction:
-      - 004f804000c06115
+      - 00983d0d0053e775
       X-Tsa-Request-Body-Time:
-      - '1'
+      - '0'
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Ua-Compatible:
@@ -71,7 +71,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"token_type":"bearer","access_token":"AAAAAAAAAAAAAAAAAAAAAChyxgAAAAAA01SFyzEXmJQTTXERpvdSvVVNoEQ%3DMUjSR05Gi2kY4xFqSyJPpWfa8gtIGky1PGISrea0MBPy2cTXos"}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 19:53:40 GMT
+  recorded_at: Sun, 23 Oct 2016 14:59:00 GMT
 - request:
     method: get
     uri: https://api.twitter.com/1.1/users/show.json?screen_name=krystalcampionishkshkdhs
@@ -101,24 +101,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 19:53:41 GMT
+      - Sun, 23 Oct 2016 14:59:00 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Sat, 22 Oct 2016 19:53:41 GMT
+      - Sun, 23 Oct 2016 14:59:00 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_d
       Set-Cookie:
-      - guest_id=v1%3A147716602113364699; Domain=.twitter.com; Path=/; Expires=Mon,
-        22-Oct-2018 19:53:41 UTC
+      - guest_id=v1%3A147723474062908435; Domain=.twitter.com; Path=/; Expires=Tue,
+        23-Oct-2018 14:59:00 UTC
       Status:
       - 404 Not Found
       Strict-Transport-Security:
       - max-age=631138519
       X-Connection-Hash:
-      - 6102d8d55f969ac8e1af858927204451
+      - e426fcb26350202658df6a9074e51b28
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -126,13 +126,13 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '900'
       X-Rate-Limit-Remaining:
-      - '896'
+      - '864'
       X-Rate-Limit-Reset:
-      - '1477166220'
+      - '1477235578'
       X-Response-Time:
       - '140'
       X-Transaction:
-      - 00bf4aae0006ddcf
+      - 0010f7a9007ec29c
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Xss-Protection:
@@ -141,5 +141,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"errors":[{"code":50,"message":"User not found."}]}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 19:53:41 GMT
+  recorded_at: Sun, 23 Oct 2016 14:59:00 GMT
 recorded_with: VCR 3.0.3
