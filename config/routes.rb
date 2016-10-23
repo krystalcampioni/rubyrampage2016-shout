@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   root to: 'application#home'
 
+  resources :shouts, only: [:create]
+
   resources :users, path: 'u' do
-    resources :shouts, only: [:index, :create]
+    resources :shouts, only: [:index]
   end
 
   get '/users/me/shouts' => 'shouts#me', as: :current_user_shouts
