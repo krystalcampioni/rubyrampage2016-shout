@@ -8,7 +8,7 @@
     </p>
   </div>
   <address class="shout__address">
-    <b>@<%= shout.shouter.nickname %></b> sent on <%= shout.created_at.to_s(:short) %>
+    <b><%= link_to "@#{shout.shouter.nickname}", user_shouts_path(shout.shouter.nickname) %></b> sent on <%= shout.created_at.to_s(:short) %>
   </address>
   <div id="reactions-shout-<%= shout.id %>">
     <%= render "shouts/reactions", reactions: shout.reactions_array %>
