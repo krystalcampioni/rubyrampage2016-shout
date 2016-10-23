@@ -1,6 +1,5 @@
 test:
   override:
-    - bundle exec rubocop
     - bundle exec scss-lint
     - RAILS_ENV=test coverage=off bundle exec rspec
 
