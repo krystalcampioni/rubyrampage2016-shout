@@ -27,9 +27,18 @@ $(function() {
 
   function handleEmojiForShouts(selector) {
     $(selector).each(function() {
-      $(this).find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked($(this)) })
+      $(this).find('.reactions--button').emojiPicker({ emojiPicked: emojiPicked($(this)) });
     });
   };
 
+  function handleEmojiClick(selector) {
+    $('.shout').on('click', '.reactions', function(e) {
+      var shoutId = $(this).parents('.shout').data('shout-id');
+      var emoji = $(this).find('.reactions__emoji').html();
+      $.post('/shouts/' + shoutId + '/reactions', { reaction: { emoji: emoji } });
+    });
+  }
+
   handleEmojiForShouts('.shout');
+  handleEmojiClick();
 });
