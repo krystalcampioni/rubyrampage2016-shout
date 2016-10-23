@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :shouts, through: :shout_users
 
   validates :name, presence: true
-  validates :nickname, presence: true, uniqueness: true
+  validates :nickname, presence: true, uniqueness: { case_sensitive: false }
   validates :profile_image_url, presence: true
 
   def to_param
@@ -12,7 +12,7 @@ class User < ApplicationRecord
   end
 
   def self.fetch_by_nickname(nickname)
-    find_by(nickname: nickname) || create(UserFromTwitter.new(nickname).attributes)
+    find_by('lower(nickname) = ?', nickname.downcase) || create!(UserFromTwitter.new(nickname).attributes)
   end
 
   def self.find_or_create_from_auth_hash(twitter_hash)
