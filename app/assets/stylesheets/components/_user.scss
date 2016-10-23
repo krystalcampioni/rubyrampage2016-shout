@@ -8,15 +8,15 @@
 
   &__flag-name {
     background: image-url('flag.svg');
-    color: $contrast-color;
-    background-size: 100%;
     background-repeat: no-repeat;
+    background-size: 100%;
+    color: $contrast-color;
+    font-size: 21px;
     height: 65px;
-    width: 300px;
     margin: 0 auto;
     max-width: 100%;
-    font-size: 21px;
     padding-top: 8px;
+    width: 300px;
   }
 
   &__menu {
@@ -30,9 +30,9 @@
     width: 110px;
 
     &--is-large {
-      width: 120px;
       border-color: lighten($main-color, 10%);
       margin-top: 20px;
+      width: 120px;
     }
   }
 
