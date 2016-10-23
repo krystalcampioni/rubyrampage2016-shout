@@ -6,6 +6,19 @@
     padding: 18px 0;
   }
 
+  &__flag-name {
+    background: image-url('flag.svg');
+    color: $contrast-color;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 300px;
+    margin: 0 auto;
+    max-width: 100%;
+    font-size: 21px;
+    padding-top: 8px;
+  }
+
   &__menu {
     float: right;
   }
@@ -14,6 +27,12 @@
     border: 5px solid rgba($text-color, .5);
     border-radius: 50%;
     margin-top: 60px;
+
+    &--is-large {
+      width: 100px;
+      border-color: lighten($main-color, 10%);
+      margin-top: 20px;
+    }
   }
 
   &__logout {
