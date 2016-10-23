@@ -20,6 +20,8 @@ gem 'neat'
 
 gem 'omniauth-twitter', '1.2.1'
 gem 'twitter'
+
+gem 'rails_emoji_picker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

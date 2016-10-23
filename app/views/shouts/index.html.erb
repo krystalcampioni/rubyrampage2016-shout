@@ -5,7 +5,9 @@
 <div class="new-shout">
   <div class="container">
   <div class="new-shout__title">Give kudos to someone:</div>
-  <%= f.text_area :message, placeholder: "Send a star to @twitteraccount", class: "new-shout__textarea" %>
+  <div class="emoji-picker-container">
+    <%= f.text_area :message, placeholder: "Send a star to @twitteraccount", data: { emojiable: true }, class: "new-shout__textarea" %>
+  </div>
   <div class="new-shout__button-wrapper">
     <%= f.submit 'Save', class: "button button--primary" %>
   </div>
