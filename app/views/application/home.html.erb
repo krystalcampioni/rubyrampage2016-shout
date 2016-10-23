@@ -3,7 +3,6 @@
     <h1>Lorem ipsum dolor sit amet</h1>
     <h2>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
     <% if current_user %>
-      <%= current_user.nickname %>
     <% else %>
       <%= link_to 'Login with Twitter', '/auth/twitter', class: "button button--twitter" %>
     <% end %>

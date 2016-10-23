@@ -28,11 +28,12 @@ $buttons: 'button', 'input[type="submit"]';
   }
 
   &--primary {
-    background: $secondary-color;
+    background: darken($secondary-color, 20%);
     color: $contrast-color;
 
     &:hover {
-      background: lighten($secondary-color, 10%);
+      background: darken($secondary-color, 30%);
+      color: $contrast-color;
     }
   }
 

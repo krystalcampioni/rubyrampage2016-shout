@@ -1,12 +1,14 @@
-<h1>Shouts#index</h1>
-<p>Find me in app/views/shouts/index.html.erb</p>
+<% content_for :header_class, "header--is-opaque" %>
+
 
 <%= form_for [current_user, Shout.new] do |f| %>
-<p>
-  Message:
-  <%= f.text_area :message %>
-</p>
-
-<%= f.submit 'Salvar' %>
-
+<div class="new-shout">
+  <div class="container">
+  <div class="new-shout__title">Give kudos to someone:</div>
+  <%= f.text_area :message, placeholder: "Send a star to @twitteraccount", class: "new-shout__textarea" %>
+  <div class="new-shout__button-wrapper">
+    <%= f.submit 'Save', class: "button button--primary" %>
+  </div>
+  </div>
+</div>
 <% end %>

@@ -8,10 +8,10 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <header class="header">
+<body>
+    <header class="header  <%= yield (:header_class) %>">
       <div class="header__content">
-        <h1 class="header__logo">GimmeStars</h2>
+        <h1 class="header__logo"><%= link_to 'Shout', root_path %></h1>
         <% if current_user %>
           <nav class="user__menu">
 
