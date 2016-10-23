@@ -9,4 +9,12 @@ RSpec.describe Shout, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:message) }
   end
+
+  describe '#identified_users' do
+    let!(:shout) { create(:shout, message: 'Hi @pedro, @krystal @foo_bar ????') }
+
+    it 'does returns users' do
+      expect(shout.identified_users).to eq(['@pedro', '@krystal', '@foo_bar'])
+    end
+  end
 end
