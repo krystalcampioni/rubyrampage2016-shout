@@ -19,9 +19,15 @@
     padding-left: 10px;
     width: 110px;
 
+    @include media($mobile) {
+      margin-top: 10px;
+      padding: 0;
+      width: 100%;
+    }
+
     @include media($medium-screen-up) {
-      padding-right: 50px;
-      width: 200px;
+      padding-right: 0;
+      width: 120px;
     }
   }
 
@@ -38,7 +44,8 @@
 
     @include media($medium-screen-up) {
       display: block;
-      width: 200px;
+      font-size: 15px;
+      width: 145px;
     }
   }
 
@@ -66,6 +73,11 @@
     padding: 0;
     resize: none;
     width: calc(100% - 110px);
+
+    @include media($mobile) {
+      padding: 0;
+      width: 100%;
+    }
 
     @include media($medium-screen-up) {
       width: calc(100% - 400px);
