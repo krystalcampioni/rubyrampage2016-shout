@@ -8,7 +8,7 @@ class Shout < ApplicationRecord
   after_create :associate_users
 
   def identified_users
-    message.scan(/@[a-zA-Z_]*/)
+    message.scan(/(^|[^@\w])@(\w{1,15})\b/).map(&:last)
   end
 
   private
@@ -16,7 +16,7 @@ class Shout < ApplicationRecord
   def associate_users
     identified_users.each do |nickname|
       user = User.fetch_by_nickname(nickname)
-      shout_users.find_or_create_by(user_id: user.id)
+      shout_users.find_or_create_by!(user_id: user.id)
     end
   end
 end
