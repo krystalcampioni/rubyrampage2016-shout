@@ -21,7 +21,7 @@ $(function() {
     var shoutId = el.data('shout-id');
 
     return function(emoji) {
-      console.log(emoji, shoutId);
+      $.post('/shouts/' + shoutId + '/reactions', { emoji: emoji });
     }
   };
 
