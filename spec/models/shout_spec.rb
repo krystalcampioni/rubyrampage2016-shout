@@ -5,6 +5,7 @@ RSpec.describe Shout, type: :model do
     it { is_expected.to belong_to(:shouter).class_name('User') }
     it { is_expected.to have_many(:shout_users) }
     it { is_expected.to have_many(:users).through(:shout_users) }
+    it { is_expected.to have_many(:reactions) }
   end
 
   describe 'validations' do

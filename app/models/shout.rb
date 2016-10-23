@@ -2,6 +2,7 @@ class Shout < ApplicationRecord
   belongs_to :shouter, class_name: 'User'
   has_many :shout_users
   has_many :users, through: :shout_users
+  has_many :reactions
 
   validates :message, presence: true
 

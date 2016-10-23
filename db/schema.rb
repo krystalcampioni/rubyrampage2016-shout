@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023141624) do
+ActiveRecord::Schema.define(version: 20161023200627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reactions", force: :cascade do |t|
+    t.string   "emoji"
+    t.integer  "shout_id"
+    t.string   "user_identifier"
+    t.integer  "counter",         default: 0
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["shout_id"], name: "index_reactions_on_shout_id", using: :btree
+  end
 
   create_table "shout_users", force: :cascade do |t|
     t.integer  "user_id"
@@ -42,6 +52,7 @@ ActiveRecord::Schema.define(version: 20161023141624) do
     t.datetime "updated_at",        null: false
   end
 
+  add_foreign_key "reactions", "shouts"
   add_foreign_key "shout_users", "shouts"
   add_foreign_key "shout_users", "users"
   add_foreign_key "shouts", "users"
