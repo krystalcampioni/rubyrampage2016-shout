@@ -7,8 +7,8 @@
           <span class="tab-link--small">received</span>
         </a>
         <div class="tab-content">
-          <% Shout.order(created_at: :desc).limit(5).each do |shout| %>
-              <%= render shout =%>
+          <% @shouts.each do |shout| %>
+            <%= render shout =%>
           <% end %>
         </div>
       </li>
@@ -18,8 +18,8 @@
           <span class="tab-link--big">102 ⭐️</span>
         </a>
         <div class="tab-content">
-          <% Shout.order(created_at: :desc).limit(5).each do |shout| %>
-              <%= render shout =%>
+          <% @user.sent_shouts.each do |shout| %>
+            <%= render shout %>
           <% end %>
         </div>
       </li>
