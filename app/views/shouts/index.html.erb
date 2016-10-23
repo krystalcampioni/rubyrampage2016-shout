@@ -1,7 +1,6 @@
 <% content_for :header_class, "header--is-opaque" %>
 
-
-<%= form_for [current_user, Shout.new] do |f| %>
+<%= form_for Shout.new do |f| %>
 <div class="new-shout">
   <div class="container">
   <div class="new-shout__title">Give kudos to someone:</div>
