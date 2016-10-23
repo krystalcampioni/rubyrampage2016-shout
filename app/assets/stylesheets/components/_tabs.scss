@@ -11,9 +11,9 @@
   $tab-mode: $medium-screen;
 
   @include clearfix;
-  line-height: 1.5;
   padding: 0;
   margin-top: 0;
+  text-align: center;
 
   .tab-header-and-content {
     display: inline;
@@ -22,8 +22,23 @@
   .tab-link {
     color: $contrast-color;
     display: inline-block;
-    padding: ($base-spacing / 2) $gutter;
+    padding: 10px 0;
+    text-align: center;
     text-decoration: none;
+
+    &--big {
+      float: left;
+      font-size: 26px;
+      font-weight: bold;
+      line-height: .9;
+      width: 100%;
+    }
+
+    &--small {
+      font: 14px;
+      float: left;
+      width: 100%;
+    }
 
     &:hover {
       color: rgba($black, 0.3);
