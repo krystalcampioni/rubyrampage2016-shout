@@ -13,23 +13,39 @@ RSpec.describe Shout, type: :model do
 
   describe '#callbacks' do
     describe '#after_create' do
-      let!(:shout) { create(:shout, message: 'Hi @pedro, @krystal @foo_bar ????') }
+      context 'with only new users' do
+        let!(:shout) { create(:shout, message: 'Hi @pedro, @krystal @foo_bar ????') }
 
-      it 'does associate users', :vcr do
-        expect(shout.users.count).to eq(3)
+        it 'does associate users', :vcr do
+          expect(shout.users.count).to eq(3)
+        end
+
+        it 'does fetch correct nicknames', :vcr do
+          expect(shout.users.pluck(:nickname)).to eq(%w(pedro Krystal Foo_Bar))
+        end
       end
 
-      it 'does fetch correct nicknames', :vcr do
-        expect(shout.users.pluck(:nickname)).to eq(%w(pedro Krystal Foo_Bar))
+      context 'with already created user' do
+        before { create(:user, nickname: 'pedro') }
+
+        let!(:shout) { create(:shout, message: 'Hi @pedro, @krystal @foo_bar ????') }
+
+        it 'does associate users', :vcr do
+          expect(shout.users.count).to eq(3)
+        end
+
+        it 'does fetch correct nicknames', :vcr do
+          expect(shout.users.pluck(:nickname)).to eq(%w(pedro Krystal Foo_Bar))
+        end
       end
     end
   end
 
-  describe '#identified_users' do
+  describe '#identified_users', :vcr do
     let!(:shout) { create(:shout, message: 'Hi @pedro, @krystal @foo_bar ????') }
 
     it 'does returns users', :vcr do
-      expect(shout.identified_users).to eq(['@pedro', '@krystal', '@foo_bar'])
+      expect(shout.identified_users).to eq(%w(pedro krystal foo_bar))
     end
   end
 end
