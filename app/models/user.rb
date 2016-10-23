@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :sent_shouts, class_name: 'Shout', foreign_key: :shouter_id
-  has_and_belongs_to_many :shouts
+  has_many :shout_users
+  has_many :shouts, through: :shout_users
 
   validates :name, presence: true
   validates :nickname, presence: true, uniqueness: true
