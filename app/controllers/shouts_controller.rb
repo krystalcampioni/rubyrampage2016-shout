@@ -2,7 +2,7 @@ class ShoutsController < ApplicationController
   before_action :authenticate_user!, only: [:me, :create]
 
   def index
-    @user = User.find_by!(nickname: params[:user_id])
+    @user = User.fetch_by_nickname(params[:user_id])
     @shouts = @user.shouts
   end
 
