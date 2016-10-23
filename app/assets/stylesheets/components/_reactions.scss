@@ -1,8 +1,9 @@
 .reactions {
-  border: solid .5px rgba($text-color, .06);
+  border: .5px solid rgba($text-color , .06); 
   border-radius: $base-border-radius;
   float: left;
   line-height: 1.2;
+  margin-bottom: 5px;
   margin-right: 5px;
   padding: 2px 5px;
 
