@@ -1,7 +1,9 @@
 class ReactionsController < ApplicationController
   def create
-    reaction = shout.reactions.find_or_create_by(emoji: reaction_params[:emoji])
-    reaction.increment!(:counter)
+    emoji_symbol = Gemojione::Index.new.find_by_moji(reaction_params[:emoji])['name']
+    service = CreateOrDeleteReaction.new(shout, emoji, cookies["shout-#{shout.id}"])
+    current_reactions = (cookies["shout-#{shout.id}"] || '').split(',') << emoji_symbol
+    cookies["shout-#{shout.id}"] = "#{current_reactions.uniq.join(',')}"
   end
 
   private

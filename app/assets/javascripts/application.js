@@ -17,11 +17,15 @@
 
 $(function() {
 
+  function postReaction(emoji, shoutId) {
+    $.post('/shouts/' + shoutId + '/reactions', { reaction: { emoji: emoji } });
+  };
+
   function emojiPicked(el) {
     var shoutId = el.data('shout-id');
 
     return function(emoji) {
-      $.post('/shouts/' + shoutId + '/reactions', { reaction: { emoji: emoji } });
+      postReaction(emoji, shoutId);
     }
   };
 
@@ -31,14 +35,17 @@ $(function() {
     });
   };
 
-  function handleEmojiClick(selector) {
+  function handleEmojiClick() {
+  };
+
+  function bindEmojiClick() {
     $('.shout').on('click', '.reactions', function(e) {
       var shoutId = $(this).parents('.shout').data('shout-id');
       var emoji = $(this).find('.reactions__emoji').html();
-      $.post('/shouts/' + shoutId + '/reactions', { reaction: { emoji: emoji } });
+      postReaction(emoji, shoutId);
     });
   }
 
   handleEmojiForShouts('.shout');
-  handleEmojiClick();
+  bindEmojiClick();
 });

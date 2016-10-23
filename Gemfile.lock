@@ -66,6 +66,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.14)
     formatador (0.2.5)
+    gemojione (3.2.0)
+      json
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     guard (2.14.0)
@@ -285,6 +287,7 @@ DEPENDENCIES
   bourbon
   byebug
   factory_girl_rails
+  gemojione
   guard-rspec
   jbuilder (~> 2.5)
   jquery-rails
