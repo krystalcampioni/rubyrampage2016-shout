@@ -20,7 +20,7 @@ RSpec.describe SessionsController, type: :controller do
     end
 
     it { expect(session[:user_id]).to_not be_nil }
-    it { expect(response).to redirect_to(root_path) }
+    it { expect(response).to redirect_to(user_shouts_path(User.last)) }
     it { expect(assigns(:user)).to eq(User.find_by(nickname: 'johnfuu')) }
   end
 
