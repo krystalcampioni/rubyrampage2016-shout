@@ -8,7 +8,7 @@ class ShoutsController < ApplicationController
   end
 
   def create
-    @shout = @user.shouts.create!(shout_params.merge(shouter: current_user))
+    @shout = @user.sent_shouts.create!(shout_params.merge(shouter: current_user))
     redirect_to root_path
   end
 
@@ -22,7 +22,7 @@ class ShoutsController < ApplicationController
   private
 
   def fetch_user
-    @user = User.find_by(nickname: params[:user_id]) || User.create(UserFromTwitter.new(params[:user_id]).attributes)
+    @user = User.fetch_by_nickname(params[:user_id])
   end
 
   def shout_params
