@@ -16,22 +16,14 @@
   margin-top: 0;
 
   .tab-header-and-content {
-    list-style: none;
-
-    @include media($tab-mode) {
-      display: inline;
-    }
+    display: inline;
   }
 
   .tab-link {
     color: $contrast-color;
-    display: block;
+    display: inline-block;
     padding: ($base-spacing / 2) $gutter;
     text-decoration: none;
-
-    @include media($tab-mode) {
-      display: inline-block;
-    }
 
     &:hover {
       color: rgba($black, 0.3);
@@ -44,10 +36,7 @@
     &.is-active {
     	background-color: rgba($black, 0.3);
       color: $contrast-color;
-
-      @include media($tab-mode) {
-        margin-bottom: -1px;
-      }
+      margin-bottom: -1px;
     }
   }
 
@@ -55,9 +44,6 @@
     display: none;
     padding: $base-spacing $gutter;
     width: 100%;
-
-    @include media($tab-mode) {
-      float: left;
-    }
+    float: left;
   }
 }
