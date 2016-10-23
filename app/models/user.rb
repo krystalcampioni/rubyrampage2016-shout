@@ -11,7 +11,7 @@ class User < ApplicationRecord
   end
 
   def self.fetch_by_nickname(nickname)
-    User.find_by(nickname: nickname) || User.create(UserFromTwitter.new(nickname).attributes)
+    find_by(nickname: nickname) || create(UserFromTwitter.new(nickname).attributes)
   end
 
   def self.find_or_create_from_auth_hash(twitter_hash)
