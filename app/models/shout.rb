@@ -13,7 +13,7 @@ class Shout < ApplicationRecord
   end
 
   def reaction_badge
-    %w(⭐️ 😻 ❤️).sample
+    reactions.order(counter: :desc).limit(1).first.try(:emoji) || '⭐️'
   end
 
   def reactions_array
