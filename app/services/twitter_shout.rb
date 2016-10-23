@@ -25,7 +25,7 @@ class TwitterShout
       config.consumer_key = Rails.application.secrets.shout_twitter_api_key
       config.consumer_secret = Rails.application.secrets.shout_twitter_secret
       config.access_token = Rails.application.secrets.shout_twitter_access_key
-      config.access_token_secret =  Rails.application.secrets.shout_twitter_access_secret
+      config.access_token_secret = Rails.application.secrets.shout_twitter_access_secret
     end
   end
 end

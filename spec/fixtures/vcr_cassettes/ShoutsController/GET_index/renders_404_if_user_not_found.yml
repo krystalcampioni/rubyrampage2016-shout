@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/users/show.json?screen_name=batman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.16.0
+      Authorization:
+      - OAuth oauth_consumer_key="<TWITTER_API_KEY>", oauth_nonce="c1a16a7557f6087f17d5fdfbb92e5f82",
+        oauth_signature="tKoebd2CIE8wfkdC91vBDz02MM8%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1477267096", oauth_token="8618882-RX6kuoHZyonsbSTmXPfNFJiLKCKyjbHWjdbu4vCc1X",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1039'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 23 Oct 2016 23:58:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 23 Oct 2016 23:58:16 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_d
+      Set-Cookie:
+      - guest_id=v1%3A147726709693025853; Domain=.twitter.com; Path=/; Expires=Tue,
+        23-Oct-2018 23:58:16 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 0dc64c0d645a37a63d5e3db37a320394
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '900'
+      X-Rate-Limit-Remaining:
+      - '899'
+      X-Rate-Limit-Reset:
+      - '1477267996'
+      X-Response-Time:
+      - '182'
+      X-Transaction:
+      - 0016d60a001c22f8
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":6096262,"id_str":"6096262","name":"Batman","screen_name":"Batman","location":"Gotham","profile_location":null,"description":"Dark
+        Knight. Detective. Scientist. Superhero. | Not affiliated with DC, Warner
+        Brothers, Time Warner.","url":"http:\/\/t.co\/vWwQUp5h4b","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/vWwQUp5h4b","expanded_url":"http:\/\/www.batman.com","display_url":"batman.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":134328,"friends_count":81,"listed_count":789,"created_at":"Thu
+        May 17 03:47:19 +0000 2007","favourites_count":22,"utc_offset":-14400,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":79,"lang":"en","status":{"created_at":"Sat
+        Apr 16 06:32:10 +0000 2016","id":721224646977261568,"id_str":"721224646977261568","text":"Lofty
+        towers. Closed doors. Cloistered luxury. Power. In dark they gather, imagine
+        their corrupt vows, deeds hidden. I see best in the dark.","truncated":false,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":170,"favorite_count":311,"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"000000","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/17847592\/batmanbegins_normal.png","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/17847592\/batmanbegins_normal.png","profile_link_color":"4646A3","profile_sidebar_border_color":"4B4A4A","profile_sidebar_fill_color":"1F211D","profile_text_color":"807373","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false,"translator_type":"regular"}'
+    http_version: 
+  recorded_at: Sun, 23 Oct 2016 23:58:17 GMT
+recorded_with: VCR 3.0.3

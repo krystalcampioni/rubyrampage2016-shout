@@ -12,10 +12,10 @@ RSpec.describe ShoutsController, type: :controller do
       expect(assigns(:shouts)).to contain_exactly(shout)
     end
 
-    it 'renders 404 if user not found' do
+    it 'renders 404 if user not found', :vcr do
       expect do
         get :index, params: { user_id: 'batman' }
-      end.to raise_error ActiveRecord::RecordNotFound
+      end.to_not raise_error ActiveRecord::RecordNotFound
     end
   end
 
