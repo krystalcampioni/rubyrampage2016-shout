@@ -16,5 +16,10 @@
       <span class="reactions__count"><%= rand(40) %></span>
     </div>
   <% end %>
-  <div class="reactions reactions--button">Add reaction </div>
+  <div class="reactions reactions--button">
+    <p class="emoji-picker-container">
+      <%= text_field_tag :emoji, nil, class: 'add-reaction form-control', id: "add-reaction-shout-#{shout.id}", data: { emojiable: true, shout_id: shout.id } %>
+    </p>
+    Add reaction
+  </div>
 </article>

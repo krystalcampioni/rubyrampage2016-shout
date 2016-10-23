@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require rails_emoji_picker
 //= require_tree .
+
+
+$().ready( function() {
+  $(".add-reaction").on("keyup", function(){
+    console.log($(this));
+    // $(this).val("");
+  })
+});
